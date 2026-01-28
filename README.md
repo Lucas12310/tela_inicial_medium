@@ -11,12 +11,12 @@ O foco do desafio foi aplicar conceitos fundamentais de UI no Flutter, como:
 
 A interface foi construída seguindo rigorosamente o layout proposto, garantindo responsividade, organização do código e reutilização de componentes.
 
-## 🛠️ Tecnologias utilizadas
+## Tecnologias utilizadas
 - Flutter
 - Dart
 - Material Design
 
-## 📱 Funcionalidades da tela
+## Funcionalidades da tela
 - Botões de cadastro com Google e Email
 - Botão social circular
 - Links de Sign in, Terms of Service e Privacy Policy
