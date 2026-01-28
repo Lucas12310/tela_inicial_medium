@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tela_inicial_medium/widgets/circle_social_button.widget.dart';
 import 'package:tela_inicial_medium/widgets/social_button.widget.dart';
+import 'package:tela_inicial_medium/widgets/terms_and_privacy.widget.dart';
 
 class HomePageMedium extends StatelessWidget {
   const HomePageMedium({super.key});
@@ -13,12 +15,18 @@ class HomePageMedium extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Image.asset("assets/images/medium.png", width: 50, height: 50),
+              Image.asset(
+                "assets/images/medium.png",
+                width: 50,
+                height: 50,
+                key: ValueKey("imageMedium"),
+              ),
               Expanded(
                 child: Align(
                   alignment: Alignment.center,
                   child: Text(
                     "Join Medium.",
+                    key: ValueKey("textTitle"),
                     style: TextStyle(
                       fontSize: 40,
                       fontWeight: FontWeight.bold,
@@ -31,16 +39,23 @@ class HomePageMedium extends StatelessWidget {
               const SocialButton(
                 pathImage: "assets/images/google.png",
                 text: "Sign up with Google",
+                key: ValueKey("signupGoogle"),
               ),
               SizedBox(height: 15),
               const SocialButton(
                 pathImage: "assets/images/email.png",
                 text: "Sign up with Email",
+                key: ValueKey("signupEmail"),
               ),
               SizedBox(height: 30),
               Row(
                 children: const [
-                  Expanded(child: Divider(color: Colors.black)),
+                  Expanded(
+                    child: Divider(
+                      color: Colors.black,
+                      key: ValueKey("dividerLeft"),
+                    ),
+                  ),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 10),
                     child: Text(
@@ -48,28 +63,19 @@ class HomePageMedium extends StatelessWidget {
                       selectionColor: Colors.grey,
                     ),
                   ),
-                  Expanded(child: Divider(color: Colors.black)),
+                  Expanded(
+                    child: Divider(
+                      color: Colors.black,
+                      key: ValueKey("dividerRight"),
+                    ),
+                  ),
                 ],
               ),
               SizedBox(height: 30),
-              InkWell(
-                onTap: () {},
-                customBorder: const CircleBorder(),
-                child: Container(
-                  width: 55,
-                  height: 55,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Colors.black),
-                  ),
-                  alignment: Alignment.center,
-                  child: Image.asset("assets/images/facebook.png", width: 30),
-                ),
-              ),
+              CircleSocialButton(),
               SizedBox(height: 30),
               Align(
                 child: RichText(
-                  
                   text: TextSpan(
                     text: "Already have an account? ",
                     style: TextStyle(color: Colors.black),
@@ -86,37 +92,7 @@ class HomePageMedium extends StatelessWidget {
               Expanded(
                 child: Align(
                   alignment: AlignmentGeometry.bottomCenter,
-                  child: RichText(
-                    textAlign: TextAlign.justify,
-                    text: TextSpan(
-                      text: "By signing up, you agree to our ",
-                      style: TextStyle(color: Colors.grey),
-                      children: [
-                        TextSpan(
-                          text: "Terms of Service ",
-                          style: TextStyle(color: Colors.green),
-                          children: [
-                            TextSpan(
-                              text: "and acknowledge that our ",
-                              style: TextStyle(color: Colors.grey),
-                              children: [
-                                TextSpan(
-                                  text: "Privacy Policy ",
-                                  style: TextStyle(color: Colors.green),
-                                  children: [
-                                    TextSpan(
-                                      text: "applies to you.",
-                                      style: TextStyle(color: Colors.grey),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
+                  child: TermsAndPrivacy(),
                 ),
               ),
             ],
