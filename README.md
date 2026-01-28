@@ -1,16 +1,25 @@
-# tela_inicial_medium
+# Tela Inicial do Medium — Flutter
 
-A new Flutter project.
+Este projeto consiste na recriação da tela inicial do aplicativo Medium, desenvolvida em Flutter como parte de uma atividade prática de formação.
 
-## Getting Started
+O foco do desafio foi aplicar conceitos fundamentais de UI no Flutter, como:
+- Componentização de widgets
+- Alinhamento e posicionamento com Column, Expanded, Align e Stack
+- Criação de botões personalizados
+- Uso correto de Keys para testes automatizados
+- Fidelidade visual ao protótipo original
 
-This project is a starting point for a Flutter application.
+A interface foi construída seguindo rigorosamente o layout proposto, garantindo responsividade, organização do código e reutilização de componentes.
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠️ Tecnologias utilizadas
+- Flutter
+- Dart
+- Material Design
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 📱 Funcionalidades da tela
+- Botões de cadastro com Google e Email
+- Botão social circular
+- Links de Sign in, Terms of Service e Privacy Policy
+- Layout responsivo e centralizado
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Projeto com foco em boas práticas de UI e estruturação de código em Flutter.
